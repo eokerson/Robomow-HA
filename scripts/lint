@@ -71,6 +71,9 @@ fi
 echo "- Markdown lint"
 pymarkdown scan .
 
+echo "- manifest version check"
+./scripts/check_manifest_version.py
+
 echo "- conflict marker check"
 if git grep -nE '^(<<<<<<<|=======|>>>>>>>)' -- .; then
     echo "ERROR: Found merge conflict markers in repository files." >&2

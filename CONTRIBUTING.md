@@ -33,6 +33,26 @@ It runs:
 - Markdown lint for Markdown files (using `pymarkdown`)
 - merge conflict marker detection
 
+## Release process
+
+When preparing a new release:
+
+- Update `CHANGELOG.md` and add a new release section for the next version.
+- Bump the version number in the `manifest.json` file.
+- Create a git tag, for example:
+
+```bash
+git tag v0.3.0
+```
+
+- Push the tag:
+
+```bash
+git push origin v0.3.0
+```
+
+- Create a GitHub release for the new tag.
+
 ## Reporting bugs
 
 Please use GitHub issues to report bugs.
