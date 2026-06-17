@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Izberite napravo Robomow, ki jo želite dodati, in vnesite serijsko številko matične plošče. \n\nZa pridobitev serijske številke matične plošče:\n1) Prijavite se na myrobomow.robomow.com.\n2) V brskalniku odprite orodja za razvijalce (F12).\n3) Pojdite na zavihek Omrežje.\n4) Ponovno naložite stran.\n5) Poiščite zahtevo, ki se konča z /api/customer/products.\n6) Kliknite zahtevo in odprite zavihek Odgovor.\n7) V odgovoru JSON poiščite polje z imenom MainboardSerial. Ta vrednost je dejanska serijska številka matične plošče.",
+                "description": "Izberite napravo Robomow, ki jo želite dodati, in vnesite serijsko številko matične plošče.\n\nZa pridobitev serijske številke matične plošče:\n1) Prijavite se na myrobomow.robomow.com.\n2) V brskalniku odprite orodja za razvijalce (F12).\n3) Pojdite na zavihek Omrežje.\n4) Ponovno naložite stran.\n5) Poiščite zahtevo, ki se konča z /api/customer/products.\n6) Kliknite zahtevo in odprite zavihek Odgovor.\n7) V odgovoru JSON poiščite polje z imenom MainboardSerial. Ta vrednost je dejanska serijska številka matične plošče.",
                 "data": {
                     "address": "Naslov",
                     "mainboard_serial": "Serijska številka matične plošče"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Vnesite serijsko številko matične plošče za napravo Robomow, ki jo želite dodati v Home Assistant.\n\nZa pridobitev serijske številke matične plošče:\n1) Prijavite se na myrobomow.robomow.com.\n2) V brskalniku odprite orodja za razvijalce (F12).\n3) Pojdite na zavihek Omrežje.\n4) Ponovno naložite stran.\n5) Poiščite zahtevo, ki se konča z /api/customer/products.\n6) Kliknite zahtevo in odprite zavihek Odgovor.\n7) V odgovoru JSON poiščite polje z imenom MainboardSerial. Ta vrednost je dejanska serijska številka matične plošče.",
+                "description": "Vnesite serijsko številko matične plošče za napravo Robomow, ki jo želite dodati.\n\nZa pridobitev serijske številke matične plošče:\n1) Prijavite se na myrobomow.robomow.com.\n2) V brskalniku odprite orodja za razvijalce (F12).\n3) Pojdite na zavihek Omrežje.\n4) Ponovno naložite stran.\n5) Poiščite zahtevo, ki se konča z /api/customer/products.\n6) Kliknite zahtevo in odprite zavihek Odgovor.\n7) V odgovoru JSON poiščite polje z imenom MainboardSerial. Ta vrednost je dejanska serijska številka matične plošče.",
                 "data": {
                     "mainboard_serial": "Serijska številka matične plošče"
                 }
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Naslednji odhod"
             },
-            "previous_departure": {
-                "name": "Prejšnji odhod"
+            "previous_duration": {
+                "name": "Prejšnje trajanje"
             },
             "expected_duration": {
                 "name": "Pričakovano trajanje"

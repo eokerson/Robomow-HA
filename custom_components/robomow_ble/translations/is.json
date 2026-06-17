@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Veldu Robomow tækið sem þú vilt bæta við og sláðu inn raðnúmer móðurborðsins. \n\nTil að fá raðnúmer aðalborðsins:\n1) Skráðu þig inn á myrobomow.robomow.com.\n2) Opnaðu þróunartól vafrans þíns (F12).\n3) Farðu í Network flipann.\n4) Endurhlaða síðuna.\n5) Leitaðu að beiðni sem endar á /api/customer/products.\n6) Smelltu á beiðnina og opnaðu Svar flipann.\n7) Í JSON svarinu, finndu reitinn sem heitir MainboardSerial. Þetta gildi er raunverulegt raðnúmer aðalborðsins.",
+                "description": "Veldu Robomow tækið sem þú vilt bæta við og sláðu inn raðnúmer móðurborðsins.\n\nTil að fá raðnúmer aðalborðsins:\n1) Skráðu þig inn á myrobomow.robomow.com.\n2) Opnaðu þróunartól vafrans þíns (F12).\n3) Farðu í Network flipann.\n4) Endurhlaða síðuna.\n5) Leitaðu að beiðni sem endar á /api/customer/products.\n6) Smelltu á beiðnina og opnaðu Svar flipann.\n7) Í JSON svarinu, finndu reitinn sem heitir MainboardSerial. Þetta gildi er raunverulegt raðnúmer aðalborðsins.",
                 "data": {
                     "address": "Heimilisfang",
                     "mainboard_serial": "Raðnúmer móðurborðs"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Sláðu inn raðnúmer móðurborðsins fyrir Robomow tækið sem þú vilt bæta við Home Assistant.\n\nTil að fá raðnúmer aðalborðsins:\n1) Skráðu þig inn á myrobomow.robomow.com.\n2) Opnaðu þróunartól vafrans þíns (F12).\n3) Farðu í Network flipann.\n4) Endurhlaða síðuna.\n5) Leitaðu að beiðni sem endar á /api/customer/products.\n6) Smelltu á beiðnina og opnaðu Svar flipann.\n7) Í JSON svarinu, finndu reitinn sem heitir MainboardSerial. Þetta gildi er raunverulegt raðnúmer aðalborðsins.",
+                "description": "Sláðu inn raðnúmer móðurborðsins fyrir Robomow tækið sem þú vilt bæta við.\n\nTil að fá raðnúmer aðalborðsins:\n1) Skráðu þig inn á myrobomow.robomow.com.\n2) Opnaðu þróunartól vafrans þíns (F12).\n3) Farðu í Network flipann.\n4) Endurhlaða síðuna.\n5) Leitaðu að beiðni sem endar á /api/customer/products.\n6) Smelltu á beiðnina og opnaðu Svar flipann.\n7) Í JSON svarinu, finndu reitinn sem heitir MainboardSerial. Þetta gildi er raunverulegt raðnúmer aðalborðsins.",
                 "data": {
                     "mainboard_serial": "Raðnúmer móðurborðs"
                 }
@@ -18,7 +18,7 @@
         "error": {
             "no_unique_address": "Ekkert einstakt heimilisfang gefið upp.",
             "no_mainboard_serial": "Ekkert raðnúmer aðalborðs gefið upp.",
-            "invalid_mainboard_serial": "Raðnúmer móðurborðsins er ógilt. Staðfestu það og reyndu aftur.",
+            "invalid_mainboard_serial": "Raðnúmer aðalborðsins er ógilt. Staðfestu það og reyndu aftur.",
             "model_unsupported": "Sláttuvélargerðin er ekki studd.",
             "device_not_found": "Robomow tækið fannst ekki. Færðu þig nær og reyndu aftur.",
             "service_not_found": "Áskilin Robomow Bluetooth þjónusta fannst ekki á þessu tæki.",
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Næsta brottför"
             },
-            "previous_departure": {
-                "name": "Fyrri brottför"
+            "previous_duration": {
+                "name": "Fyrri lengd"
             },
             "expected_duration": {
                 "name": "Áætluð tímalengd"
@@ -162,7 +162,7 @@
         },
         "set_schedule": {
             "name": "Stilltu áætlun",
-            "description": "Stilltu áætlun sláttuvélarinnar.",
+            "description": "Stilltu sláttuvélaráætlunina.",
             "fields": {
                 "start_time": {
                     "name": "Upphafstími",
@@ -206,7 +206,7 @@
                 },
                 "day_2_enabled": {
                     "name": "Miðvikudagur virkt",
-                    "description": "Hvort eigi að slá á miðvikudaginn."
+                    "description": "Hvort slá eigi á miðvikudaginn."
                 },
                 "day_2_duration": {
                     "name": "Lengd miðvikudags",
@@ -265,7 +265,7 @@
                     "description": "Fjöldi sláttulota fyrir laugardag (1-2)."
                 },
                 "day_5_zone": {
-                    "name": "Laugardagssvæðið",
+                    "name": "laugardagssvæði",
                     "description": "Svæði til að slá á laugardaginn."
                 },
                 "day_6_enabled": {

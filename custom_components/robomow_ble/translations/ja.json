@@ -87,7 +87,7 @@
             "next_departure": {
                 "name": "次の出発"
             },
-            "previous_departure": {
+            "previous_duration": {
                 "name": "前回の出発"
             },
             "expected_duration": {

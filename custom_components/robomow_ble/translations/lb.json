@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Wielt de Robomow Apparat deen Dir wëllt addéieren a gitt d'Mainboard Seriennummer. \n\nFir d'Mainboard Serien Zuel ze kréien:\n1) Loggt Iech op myrobomow.robomow.com.\n2) Öffnen Äre Browser Entwéckler Tools (F12).\n3) Gitt op d'Netzwierk Tab.\n4) Lued d'Säit nei.\n5) Sich no enger Demande op /api/Client/Produiten.\n6) Klickt op d'Ufro an öffnen de Tab Äntwert.\n7) An der JSON Äntwert, fannt de Feld mam Numm MainboardSerial. Dëse Wäert ass déi aktuell Mainboard Serien Zuel.",
+                "description": "Wielt de Robomow Apparat deen Dir wëllt addéieren a gitt d'Mainboard Seriennummer.\n\nFir d'Seriennummer vum Mainboard ze kréien:\n1) Aloggen op myrobomow.robomow.com.\n2) Öffnen Äre Browser Entwéckler Tools (F12).\n3) Gitt op d'Netzwierk Tab.\n4) Lued d'Säit nei.\n5) Sich no enger Demande op /api/Client/Produiten.\n6) Klickt op d'Ufro an öffnen de Tab Äntwert.\n7) An der JSON Äntwert, fannt de Feld mam Numm MainboardSerial. Dëse Wäert ass déi aktuell Mainboard Serien Zuel.",
                 "data": {
                     "address": "Adress",
                     "mainboard_serial": "Mainboard Serien Zuel"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Gitt d'Mainboard-Seriennummer fir de Robomow-Apparat un, deen Dir an den Home Assistant addéiere wëllt.\n\nFir d'Mainboard Serien Zuel ze kréien:\n1) Loggt Iech op myrobomow.robomow.com.\n2) Öffnen Äre Browser Entwéckler Tools (F12).\n3) Gitt op d'Netzwierk Tab.\n4) Lued d'Säit nei.\n5) Sich no enger Demande op /api/Client/Produiten.\n6) Klickt op d'Ufro an öffnen de Tab Äntwert.\n7) An der JSON Äntwert, fannt de Feld mam Numm MainboardSerial. Dëse Wäert ass déi aktuell Mainboard Serien Zuel.",
+                "description": "Gitt d'Mainboard Seriennummer fir de Robomow Apparat deen Dir derbäi wëllt addéieren.\n\nFir d'Seriennummer vum Mainboard ze kréien:\n1) Aloggen op myrobomow.robomow.com.\n2) Öffnen Äre Browser Entwéckler Tools (F12).\n3) Gitt op d'Netzwierk Tab.\n4) Lued d'Säit nei.\n5) Sich no enger Demande op /api/Client/Produiten.\n6) Klickt op d'Ufro an öffnen de Tab Äntwert.\n7) An der JSON Äntwert, fannt de Feld mam Numm MainboardSerial. Dëse Wäert ass déi aktuell Mainboard Serien Zuel.",
                 "data": {
                     "mainboard_serial": "Mainboard Serien Zuel"
                 }
@@ -27,7 +27,7 @@
         "abort": {
             "already_configured": "Dës Entrée ass scho konfiguréiert.",
             "no_devices_found": "Keng Robomow Apparater fonnt.",
-            "not_supported": "Dëse Bluetooth-Apparat ass net e ënnerstëtzte Robomow Méimaschin."
+            "not_supported": "Dëse Bluetooth-Gerät ass net e ënnerstëtzte Robomow Méimaschin."
         }
     },
     "exceptions": {
@@ -70,7 +70,7 @@
                     "mowing": "Méien",
                     "edge_mowing": "Kant Méien",
                     "returning_home_following_edge": "Folgend Rand Heem",
-                    "returning_home_warming_up": "Erwiermung fir heem ze kommen",
+                    "returning_home_warming_up": "Erwiermt fir heem ze kommen",
                     "returning_home_searching_edge": "Sicht Rand",
                     "going_to_start": "Gitt op de Startpunkt",
                     "learning_entry_point": "Léieren Entrée Punkt",
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Nächst Depart"
             },
-            "previous_departure": {
-                "name": "Virdrun Depart"
+            "previous_duration": {
+                "name": "Virdrun Dauer"
             },
             "expected_duration": {
                 "name": "Erwaart Dauer"
@@ -147,7 +147,7 @@
     },
     "services": {
         "start_mowing": {
-            "name": "Fänken un ze schneiden",
+            "name": "Fänken un ze maaien",
             "description": "Start Méien mat fakultativ Start Zone an Dauer.",
             "fields": {
                 "starting_zone": {
@@ -206,7 +206,7 @@
                 },
                 "day_2_enabled": {
                     "name": "Mëttwoch ageschalt",
-                    "description": "Ob e Mëttwoch mëschen."
+                    "description": "Ob e Mëttwoch ze méien."
                 },
                 "day_2_duration": {
                     "name": "Mëttwoch Dauer",
@@ -234,7 +234,7 @@
                 },
                 "day_3_zone": {
                     "name": "Donneschdeg Zone",
-                    "description": "Zone fir en Donneschdeg ze méien."
+                    "description": "Zon fir en Donneschdeg ze méien."
                 },
                 "day_4_enabled": {
                     "name": "Freideg ageschalt",
@@ -270,7 +270,7 @@
                 },
                 "day_6_enabled": {
                     "name": "Sonndeg aktivéiert",
-                    "description": "Ob Sonndes ze mëschen."
+                    "description": "Ob Sonndes ze méien."
                 },
                 "day_6_duration": {
                     "name": "Sonndeg Dauer",

@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Vælg den Robomow-enhed, du vil tilføje, og indtast bundkortets serienummer. \n\nFor at få bundkortets serienummer:\n1) Log ind på myrobomow.robomow.com.\n2) Åbn din browsers udviklerværktøjer (F12).\n3) Gå til fanen Netværk.\n4) Genindlæs siden.\n5) Se efter en anmodning, der ender på /api/customer/products.\n6) Klik på anmodningen, og åbn fanen Svar.\n7) Find feltet MainboardSerial i JSON-svaret. Denne værdi er det faktiske bundkorts serienummer.",
+                "description": "Vælg den Robomow-enhed, du vil tilføje, og indtast bundkortets serienummer.\n\nSådan får du bundkortets serienummer:\n1) Log ind på myrobomow.robomow.com.\n2) Åbn din browsers udviklerværktøjer (F12).\n3) Gå til fanen Netværk.\n4) Genindlæs siden.\n5) Se efter en anmodning, der ender på /api/customer/products.\n6) Klik på anmodningen, og åbn fanen Svar.\n7) Find feltet MainboardSerial i JSON-svaret. Denne værdi er det faktiske bundkorts serienummer.",
                 "data": {
                     "address": "Adresse",
                     "mainboard_serial": "Bundkortets serienummer"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Indtast bundkortets serienummer for den Robomow-enhed, du vil føje til Home Assistant.\n\nFor at få bundkortets serienummer:\n1) Log ind på myrobomow.robomow.com.\n2) Åbn din browsers udviklerværktøjer (F12).\n3) Gå til fanen Netværk.\n4) Genindlæs siden.\n5) Se efter en anmodning, der ender på /api/customer/products.\n6) Klik på anmodningen, og åbn fanen Svar.\n7) Find feltet MainboardSerial i JSON-svaret. Denne værdi er det faktiske bundkorts serienummer.",
+                "description": "Indtast bundkortets serienummer for den Robomow-enhed, du vil tilføje.\n\nSådan får du bundkortets serienummer:\n1) Log ind på myrobomow.robomow.com.\n2) Åbn din browsers udviklerværktøjer (F12).\n3) Gå til fanen Netværk.\n4) Genindlæs siden.\n5) Se efter en anmodning, der ender på /api/customer/products.\n6) Klik på anmodningen, og åbn fanen Svar.\n7) Find feltet MainboardSerial i JSON-svaret. Denne værdi er det faktiske bundkorts serienummer.",
                 "data": {
                     "mainboard_serial": "Bundkortets serienummer"
                 }
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Næste afgang"
             },
-            "previous_departure": {
-                "name": "Tidligere afgang"
+            "previous_duration": {
+                "name": "Tidligere varighed"
             },
             "expected_duration": {
                 "name": "Forventet varighed"
@@ -148,7 +148,7 @@
     "services": {
         "start_mowing": {
             "name": "Start græsslåningen",
-            "description": "Start klipningen med valgfri startzone og varighed.",
+            "description": "Start græsslåningen med valgfri startzone og varighed.",
             "fields": {
                 "starting_zone": {
                     "name": "Startzone",
@@ -181,7 +181,7 @@
                     "description": "Klippetid for mandag i minutter (1-255)."
                 },
                 "day_0_cycles": {
-                    "name": "Mandag cykler",
+                    "name": "Mandagscyklusser",
                     "description": "Antal klippecyklusser for mandag (1-2)."
                 },
                 "day_0_zone": {
@@ -265,7 +265,7 @@
                     "description": "Antal klippecyklusser for lørdag (1-2)."
                 },
                 "day_5_zone": {
-                    "name": "Lørdags zone",
+                    "name": "lørdag zone",
                     "description": "Zone at klippe på lørdag."
                 },
                 "day_6_enabled": {

@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Atlasiet Robomow ierīci, kuru vēlaties pievienot, un ievadiet galvenās plates sērijas numuru. \n\nLai iegūtu galvenās plates sērijas numuru:\n1) Piesakieties vietnē myrobomow.robomow.com.\n2) Atveriet pārlūkprogrammas izstrādātāja rīkus (F12).\n3) Dodieties uz cilni Tīkls.\n4) Pārlādējiet lapu.\n5) Meklējiet pieprasījumu, kas beidzas ar /api/customer/products.\n6) Noklikšķiniet uz pieprasījuma un atveriet cilni Atbilde.\n7) JSON atbildē atrodiet lauku ar nosaukumu MainboardSerial. Šī vērtība ir faktiskais galvenās plates sērijas numurs.",
+                "description": "Atlasiet Robomow ierīci, kuru vēlaties pievienot, un ievadiet galvenās plates sērijas numuru.\n\nLai iegūtu galvenās plates sērijas numuru:\n1) Piesakieties vietnē myrobomow.robomow.com.\n2) Atveriet pārlūkprogrammas izstrādātāja rīkus (F12).\n3) Dodieties uz cilni Tīkls.\n4) Pārlādējiet lapu.\n5) Meklējiet pieprasījumu, kas beidzas ar /api/customer/products.\n6) Noklikšķiniet uz pieprasījuma un atveriet cilni Atbilde.\n7) JSON atbildē atrodiet lauku ar nosaukumu MainboardSerial. Šī vērtība ir faktiskais galvenās plates sērijas numurs.",
                 "data": {
                     "address": "Adrese",
                     "mainboard_serial": "Galvenās plates sērijas numurs"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Ievadiet galvenās plates sērijas numuru tai Robomow ierīcei, kuru vēlaties pievienot mājas palīgam.\n\nLai iegūtu galvenās plates sērijas numuru:\n1) Piesakieties vietnē myrobomow.robomow.com.\n2) Atveriet pārlūkprogrammas izstrādātāja rīkus (F12).\n3) Dodieties uz cilni Tīkls.\n4) Pārlādējiet lapu.\n5) Meklējiet pieprasījumu, kas beidzas ar /api/customer/products.\n6) Noklikšķiniet uz pieprasījuma un atveriet cilni Atbilde.\n7) JSON atbildē atrodiet lauku ar nosaukumu MainboardSerial. Šī vērtība ir faktiskais galvenās plates sērijas numurs.",
+                "description": "Ievadiet galvenās plates sērijas numuru Robomow ierīcei, kuru vēlaties pievienot.\n\nLai iegūtu galvenās plates sērijas numuru:\n1) Piesakieties vietnē myrobomow.robomow.com.\n2) Atveriet pārlūkprogrammas izstrādātāja rīkus (F12).\n3) Dodieties uz cilni Tīkls.\n4) Pārlādējiet lapu.\n5) Meklējiet pieprasījumu, kas beidzas ar /api/customer/products.\n6) Noklikšķiniet uz pieprasījuma un atveriet cilni Atbilde.\n7) JSON atbildē atrodiet lauku ar nosaukumu MainboardSerial. Šī vērtība ir faktiskais galvenās plates sērijas numurs.",
                 "data": {
                     "mainboard_serial": "Galvenās plates sērijas numurs"
                 }
@@ -56,7 +56,7 @@
                 "name": "Pļāvējs mājās"
             },
             "charging_active": {
-                "name": "Uzlāde ir aktīva"
+                "name": "Aktīva uzlāde"
             },
             "disabling_device_removed": {
                 "name": "Ierīces atspējošana ir noņemta"
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Nākamā izbraukšana"
             },
-            "previous_departure": {
-                "name": "Iepriekšējā izbraukšana"
+            "previous_duration": {
+                "name": "Iepriekšējais ilgums"
             },
             "expected_duration": {
                 "name": "Paredzamais ilgums"

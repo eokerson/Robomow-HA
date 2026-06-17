@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Velg Robomow-enheten du vil legge til og skriv inn hovedkortets serienummer. \n\nFor å få hovedkortets serienummer:\n1) Logg inn på myrobomow.robomow.com.\n2) Åpne nettleserens utviklerverktøy (F12).\n3) Gå til fanen Nettverk.\n4) Last inn siden på nytt.\n5) Se etter en forespørsel som slutter på /api/customer/products.\n6) Klikk på forespørselen og åpne fanen Svar.\n7) I JSON-svaret finner du feltet som heter MainboardSerial. Denne verdien er det faktiske hovedkortets serienummer.",
+                "description": "Velg Robomow-enheten du vil legge til og skriv inn hovedkortets serienummer.\n\nFor å få hovedkortets serienummer:\n1) Logg inn på myrobomow.robomow.com.\n2) Åpne nettleserens utviklerverktøy (F12).\n3) Gå til fanen Nettverk.\n4) Last inn siden på nytt.\n5) Se etter en forespørsel som slutter på /api/customer/products.\n6) Klikk på forespørselen og åpne fanen Svar.\n7) I JSON-svaret finner du feltet som heter MainboardSerial. Denne verdien er det faktiske hovedkortets serienummer.",
                 "data": {
                     "address": "Adresse",
                     "mainboard_serial": "Hovedkortets serienummer"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Skriv inn hovedkortets serienummer for Robomow-enheten du vil legge til Home Assistant.\n\nFor å få hovedkortets serienummer:\n1) Logg inn på myrobomow.robomow.com.\n2) Åpne nettleserens utviklerverktøy (F12).\n3) Gå til fanen Nettverk.\n4) Last inn siden på nytt.\n5) Se etter en forespørsel som slutter på /api/customer/products.\n6) Klikk på forespørselen og åpne fanen Svar.\n7) I JSON-svaret finner du feltet som heter MainboardSerial. Denne verdien er det faktiske hovedkortets serienummer.",
+                "description": "Skriv inn hovedkortets serienummer for Robomow-enheten du vil legge til.\n\nFor å få hovedkortets serienummer:\n1) Logg inn på myrobomow.robomow.com.\n2) Åpne nettleserens utviklerverktøy (F12).\n3) Gå til fanen Nettverk.\n4) Last inn siden på nytt.\n5) Se etter en forespørsel som slutter på /api/customer/products.\n6) Klikk på forespørselen og åpne fanen Svar.\n7) I JSON-svaret finner du feltet som heter MainboardSerial. Denne verdien er det faktiske hovedkortets serienummer.",
                 "data": {
                     "mainboard_serial": "Hovedkortets serienummer"
                 }
@@ -17,7 +17,7 @@
         },
         "error": {
             "no_unique_address": "Ingen unik adresse oppgitt.",
-            "no_mainboard_serial": "Ingen hovedkortserienummer oppgitt.",
+            "no_mainboard_serial": "Ikke oppgitt hovedkortserienummer.",
             "invalid_mainboard_serial": "Hovedkortets serienummer er ugyldig. Bekreft det og prøv igjen.",
             "model_unsupported": "Klippermodellen støttes ikke.",
             "device_not_found": "Robomow-enheten ble ikke funnet. Gå nærmere og prøv igjen.",
@@ -44,7 +44,7 @@
             "message": "Ingen unik adresse oppgitt."
         },
         "no_mainboard_serial": {
-            "message": "Ingen hovedkortserienummer oppgitt."
+            "message": "Ikke oppgitt hovedkortserienummer."
         }
     },
     "entity": {
@@ -69,7 +69,7 @@
                     "warming_up": "Oppvarming",
                     "mowing": "Klipping",
                     "edge_mowing": "Kantklipping",
-                    "returning_home_following_edge": "Etterkant hjem",
+                    "returning_home_following_edge": "Følgende kant hjem",
                     "returning_home_warming_up": "Varmer opp for å komme hjem",
                     "returning_home_searching_edge": "Søkekant",
                     "going_to_start": "Går til utgangspunktet",
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Neste avgang"
             },
-            "previous_departure": {
-                "name": "Forrige avgang"
+            "previous_duration": {
+                "name": "Tidligere varighet"
             },
             "expected_duration": {
                 "name": "Forventet varighet"

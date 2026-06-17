@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Chagua kifaa cha Robomow unachotaka kuongeza na uweke nambari ya mfululizo ya ubao kuu. \n\nIli kupata nambari ya serial ya ubao kuu:\n1) Ingia kwa myrobomow.robomow.com.\n2) Fungua Zana za Wasanidi Programu za kivinjari chako (F12).\n3) Nenda kwenye kichupo cha Mtandao.\n4) Pakia upya ukurasa.\n5) Tafuta ombi linaloishia /api/customer/products.\n6) Bonyeza ombi na ufungue kichupo cha Majibu.\n7) Katika majibu ya JSON, pata uwanja unaoitwa MainboardSerial. Thamani hii ndiyo nambari halisi ya mfululizo ya ubao kuu.",
+                "description": "Chagua kifaa cha Robomow unachotaka kuongeza na uweke nambari ya mfululizo ya ubao kuu.\n\nIli kupata nambari ya serial ya ubao kuu:\n1) Ingia kwa myrobomow.robomow.com.\n2) Fungua Zana za Wasanidi Programu za kivinjari chako (F12).\n3) Nenda kwenye kichupo cha Mtandao.\n4) Pakia upya ukurasa.\n5) Tafuta ombi linaloishia /api/customer/products.\n6) Bonyeza ombi na ufungue kichupo cha Majibu.\n7) Katika majibu ya JSON, pata uwanja unaoitwa MainboardSerial. Thamani hii ndiyo nambari halisi ya mfululizo ya ubao kuu.",
                 "data": {
                     "address": "Anwani",
                     "mainboard_serial": "Nambari ya serial ya ubao kuu"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Weka nambari ya ufuatiliaji ya ubao mkuu ya kifaa cha Robomow unachotaka kuongeza kwenye Mratibu wa Nyumbani.\n\nIli kupata nambari ya serial ya ubao kuu:\n1) Ingia kwa myrobomow.robomow.com.\n2) Fungua Zana za Wasanidi Programu za kivinjari chako (F12).\n3) Nenda kwenye kichupo cha Mtandao.\n4) Pakia upya ukurasa.\n5) Tafuta ombi linaloishia /api/customer/products.\n6) Bonyeza ombi na ufungue kichupo cha Majibu.\n7) Katika majibu ya JSON, pata uwanja unaoitwa MainboardSerial. Thamani hii ndiyo nambari halisi ya mfululizo ya ubao kuu.",
+                "description": "Weka nambari ya ufuatiliaji ya ubao mkuu wa kifaa cha Robomow unachotaka kuongeza.\n\nIli kupata nambari ya serial ya ubao kuu:\n1) Ingia kwa myrobomow.robomow.com.\n2) Fungua Zana za Wasanidi Programu za kivinjari chako (F12).\n3) Nenda kwenye kichupo cha Mtandao.\n4) Pakia upya ukurasa.\n5) Tafuta ombi linaloishia /api/customer/products.\n6) Bonyeza ombi na ufungue kichupo cha Majibu.\n7) Katika majibu ya JSON, pata uwanja unaoitwa MainboardSerial. Thamani hii ndiyo nambari halisi ya mfululizo ya ubao kuu.",
                 "data": {
                     "mainboard_serial": "Nambari ya serial ya ubao kuu"
                 }
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Kuondoka Kujayo"
             },
-            "previous_departure": {
-                "name": "Kuondoka Awali"
+            "previous_duration": {
+                "name": "Muda Uliopita"
             },
             "expected_duration": {
                 "name": "Muda Unaotarajiwa"
@@ -190,7 +190,7 @@
                 },
                 "day_1_enabled": {
                     "name": "Jumanne kuwezeshwa",
-                    "description": "Kama utakatwa siku ya Jumanne."
+                    "description": "Ikiwa utakatwa siku ya Jumanne."
                 },
                 "day_1_duration": {
                     "name": "Muda wa Jumanne",
@@ -202,11 +202,11 @@
                 },
                 "day_1_zone": {
                     "name": "Jumanne eneo",
-                    "description": "Eneo la kukatwa siku ya Jumanne."
+                    "description": "Eneo la kukata siku ya Jumanne."
                 },
                 "day_2_enabled": {
                     "name": "Jumatano imewezeshwa",
-                    "description": "Kama utakatwa Jumatano."
+                    "description": "Ikiwa utakatwa Jumatano."
                 },
                 "day_2_duration": {
                     "name": "Muda wa Jumatano",
@@ -250,11 +250,11 @@
                 },
                 "day_4_zone": {
                     "name": "Eneo la Ijumaa",
-                    "description": "Eneo la kukata siku ya Ijumaa."
+                    "description": "Eneo la kukatwa siku ya Ijumaa."
                 },
                 "day_5_enabled": {
                     "name": "Jumamosi kuwezeshwa",
-                    "description": "Ikiwa utakatwa Jumamosi."
+                    "description": "Kama kung'oa siku ya Jumamosi."
                 },
                 "day_5_duration": {
                     "name": "Muda wa Jumamosi",

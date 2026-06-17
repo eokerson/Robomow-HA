@@ -87,7 +87,7 @@
             "next_departure": {
                 "name": "Hurrengo Irteera"
             },
-            "previous_departure": {
+            "previous_duration": {
                 "name": "Aurreko Irteera"
             },
             "expected_duration": {

@@ -2,32 +2,32 @@
     "config": {
         "step": {
             "user": {
-                "description": "Selecteer het Robomow-apparaat dat u wilt toevoegen en voer het serienummer van het moederbord in. \n\nOm het serienummer van het moederbord te vinden:\n1) Log in op myrobomow.robomow.com.\n2) Open de Ontwikkelaarstools van uw browser (F12).\n3) Ga naar het tabblad Netwerk.\n4) Herlaad de pagina.\n5) Zoek naar een aanvraag die eindigt op /api/customer/products.\n6) Klik op de aanvraag en open het tabblad Response.\n7) Zoek in de JSON-response naar het veld MainboardSerial. Deze waarde is het echte serienummer van het moederbord.",
+                "description": "Selecteer het Robomow-apparaat dat u wilt toevoegen en voer het serienummer van het moederbord in.\n\nOm het serienummer van het moederbord te verkrijgen:\n1) Log in op myrobomow.robomow.com.\n2) Open de ontwikkelaarstools van uw browser (F12).\n3) Ga naar het tabblad Netwerk.\n4) Laad de pagina opnieuw.\n5) Zoek naar een verzoek dat eindigt op /api/customer/products.\n6) Klik op het verzoek en open het tabblad Reactie.\n7) Zoek in het JSON-antwoord het veld MainboardSerial. Deze waarde is het werkelijke serienummer van het moederbord.",
                 "data": {
                     "address": "Adres",
-                    "mainboard_serial": "Serienummer van het moederbord"
+                    "mainboard_serial": "Serienummer moederbord"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Voer het serienummer van het moederbord in voor het Robomow-apparaat dat u wilt toevoegen aan Home Assistant.\n\nOm het serienummer van het moederbord te vinden:\n1) Log in op myrobomow.robomow.com.\n2) Open de Ontwikkelaarstools van uw browser (F12).\n3) Ga naar het tabblad Netwerk.\n4) Herlaad de pagina.\n5) Zoek naar een aanvraag die eindigt op /api/customer/products.\n6) Klik op de aanvraag en open het tabblad Response.\n7) Zoek in de JSON-response naar het veld MainboardSerial. Deze waarde is het echte serienummer van het moederbord.",
+                "description": "Voer het serienummer van het moederbord in voor het Robomow-apparaat dat u wilt toevoegen.\n\nOm het serienummer van het moederbord te verkrijgen:\n1) Log in op myrobomow.robomow.com.\n2) Open de ontwikkelaarstools van uw browser (F12).\n3) Ga naar het tabblad Netwerk.\n4) Laad de pagina opnieuw.\n5) Zoek naar een verzoek dat eindigt op /api/customer/products.\n6) Klik op het verzoek en open het tabblad Reactie.\n7) Zoek in het JSON-antwoord het veld MainboardSerial. Deze waarde is het werkelijke serienummer van het moederbord.",
                 "data": {
-                    "mainboard_serial": "Serienummer van het moederbord"
+                    "mainboard_serial": "Serienummer moederbord"
                 }
             }
         },
         "error": {
-            "no_unique_address": "Geen uniek adres opgegeven.",
-            "no_mainboard_serial": "Geen serienummer van het moederbord opgegeven.",
+            "no_unique_address": "Er is geen uniek adres opgegeven.",
+            "no_mainboard_serial": "Er is geen serienummer van het moederbord opgegeven.",
             "invalid_mainboard_serial": "Het serienummer van het moederbord is ongeldig. Controleer het en probeer het opnieuw.",
-            "model_unsupported": "Het Robomow model wordt niet ondersteund.",
-            "device_not_found": "Het Robomow-apparaat kon niet worden gevonden. Ga dichter bij het apparaat staan en probeer het opnieuw.",
+            "model_unsupported": "Het maaiermodel wordt niet ondersteund.",
+            "device_not_found": "Het Robomow-apparaat kon niet worden gevonden. Ga dichterbij staan ​​en probeer het opnieuw.",
             "service_not_found": "De vereiste Robomow Bluetooth-service is niet gevonden op dit apparaat.",
-            "characteristics_not_found": "De vereiste Robomow Bluetooth-karakteristieken zijn niet gevonden op dit apparaat."
+            "characteristics_not_found": "De vereiste Bluetooth-kenmerken van Robomow zijn niet gevonden op dit apparaat."
         },
         "abort": {
-            "already_configured": "Dit item is al geconfigureerd.",
+            "already_configured": "Deze invoer is al geconfigureerd.",
             "no_devices_found": "Geen Robomow-apparaten gevonden.",
-            "not_supported": "Dit Bluetooth-apparaat is geen ondersteunde Robomow-maaimachine."
+            "not_supported": "Dit Bluetooth-apparaat is geen ondersteunde Robomow-maaier."
         }
     },
     "exceptions": {
@@ -41,44 +41,44 @@
             "message": "Dit apparaatmodel wordt niet ondersteund"
         },
         "no_unique_address": {
-            "message": "Geen uniek adres opgegeven."
+            "message": "Er is geen uniek adres opgegeven."
         },
         "no_mainboard_serial": {
-            "message": "Geen serienummer van het moederbord opgegeven."
+            "message": "Er is geen serienummer van het moederbord opgegeven."
         }
     },
     "entity": {
         "binary_sensor": {
             "anti_theft_active": {
-                "name": "Antidiefstalbeveiliging actief"
+                "name": "Antidiefstal actief"
             },
             "mower_home": {
-                "name": "Maaimachine thuis"
+                "name": "Maaier thuis"
             },
             "charging_active": {
                 "name": "Opladen actief"
             },
             "disabling_device_removed": {
-                "name": "Uitschakelingsapparaat verwijderd"
+                "name": "Uitschakelapparaat verwijderd"
             }
         },
         "sensor": {
             "operating_state": {
-                "name": "Bedrijfstatus",
+                "name": "Bedrijfstoestand",
                 "state": {
                     "warming_up": "Opwarmen",
                     "mowing": "Maaien",
-                    "edge_mowing": "Kantmaaien",
-                    "returning_home_following_edge": "De rand volgen naar huis",
-                    "returning_home_warming_up": "Opwarmen voor thuiskomst",
+                    "edge_mowing": "Rand maaien",
+                    "returning_home_following_edge": "Rand naar huis volgen",
+                    "returning_home_warming_up": "Opwarmen om naar huis te gaan",
                     "returning_home_searching_edge": "Rand zoeken",
-                    "going_to_start": "Naar startpunt gaan",
-                    "learning_entry_point": "Toegangspunt leren",
+                    "going_to_start": "Op weg naar het startpunt",
+                    "learning_entry_point": "Ingangspunt voor leren",
                     "idle": "Inactief",
                     "charging": "Opladen",
                     "automatic": "Automatisch",
                     "remote_control": "Afstandsbediening",
-                    "bit": "BIT"
+                    "bit": "Beetje"
                 }
             },
             "status_message": {
@@ -87,14 +87,14 @@
             "next_departure": {
                 "name": "Volgende vertrek"
             },
-            "previous_departure": {
-                "name": "Vorige vertrek"
+            "previous_duration": {
+                "name": "Vorige duur"
             },
             "expected_duration": {
                 "name": "Verwachte duur"
             },
             "no_depart_reason": {
-                "name": "Reden voor geen vertrek"
+                "name": "Geen vertrekreden"
             }
         },
         "switch": {
@@ -102,7 +102,7 @@
                 "name": "Schema ingeschakeld"
             },
             "anti_theft_enabled": {
-                "name": "Antidiefstalbeveiliging ingeschakeld"
+                "name": "Antidiefstal ingeschakeld"
             },
             "child_lock_enabled": {
                 "name": "Kinderslot ingeschakeld"
@@ -110,34 +110,34 @@
         },
         "number": {
             "starting_point_a": {
-                "name": "Startpunt A"
+                "name": "Uitgangspunt A"
             },
             "starting_point_b": {
-                "name": "Startpunt B"
+                "name": "Uitgangspunt B"
             }
         },
         "select": {
             "wire_signal_type": {
                 "name": "Type draadsignaal",
                 "state": {
-                        "type_a": "Type A",
-                        "type_b": "Type B",
-                        "type_c": "Type C"
+                    "type_a": "Type A",
+                    "type_b": "Type B",
+                    "type_c": "Type C"
                 }
             }
         },
         "lawn_mower": {
             "mower": {
-                "name": "Grasmaaier"
+                "name": "Maaier"
             }
         }
     },
     "selector": {
         "zone": {
             "options": {
-                "main": "Hoofd",
-                "starting_point_a": "Startpunt A",
-                "starting_point_b": "Startpunt B",
+                "main": "Voornaamst",
+                "starting_point_a": "Uitgangspunt A",
+                "starting_point_b": "Uitgangspunt B",
                 "sub_1": "Subzone 1",
                 "sub_2": "Subzone 2",
                 "sub_3": "Subzone 3",
@@ -147,12 +147,12 @@
     },
     "services": {
         "start_mowing": {
-            "name": "Maaien starten",
-            "description": "Maaien starten met optionele startzone en duur.",
+            "name": "Begin met maaien",
+            "description": "Begin met maaien met optionele startzone en duur.",
             "fields": {
                 "starting_zone": {
                     "name": "Startzone",
-                    "description": "Robomow-zone waaruit maaien moet starten."
+                    "description": "Robomow-zone van waaruit u kunt beginnen met maaien."
                 },
                 "duration": {
                     "name": "Duur",
@@ -161,20 +161,20 @@
             }
         },
         "set_schedule": {
-            "name": "Schema instellen",
-            "description": "Stel het maaiplan in.",
+            "name": "Stel een schema in",
+            "description": "Stel het maaischema in.",
             "fields": {
                 "start_time": {
-                    "name": "Starttijd",
-                    "description": "Tijd om elke dag maaien te starten."
+                    "name": "Begintijd",
+                    "description": "Tijd om elke dag te beginnen met maaien."
                 },
                 "end_time": {
                     "name": "Eindtijd",
-                    "description": "Tijd om elke dag maaien te beëindigen."
+                    "description": "Tijd om te stoppen met elke dag maaien."
                 },
                 "day_0_enabled": {
                     "name": "Maandag ingeschakeld",
-                    "description": "Of maaien op maandag moet gebeuren."
+                    "description": "Of er maandag gemaaid moet worden."
                 },
                 "day_0_duration": {
                     "name": "Maandag duur",
@@ -186,11 +186,11 @@
                 },
                 "day_0_zone": {
                     "name": "Maandag zone",
-                    "description": "Zone om op maandag te maaien."
+                    "description": "Zone om maandag te maaien."
                 },
                 "day_1_enabled": {
                     "name": "Dinsdag ingeschakeld",
-                    "description": "Of maaien op dinsdag moet gebeuren."
+                    "description": "Of er dinsdag gemaaid moet worden."
                 },
                 "day_1_duration": {
                     "name": "Dinsdag duur",
@@ -201,12 +201,12 @@
                     "description": "Aantal maaicycli voor dinsdag (1-2)."
                 },
                 "day_1_zone": {
-                    "name": "Dinsdag zone",
-                    "description": "Zone om op dinsdag te maaien."
+                    "name": "Dinsdag streek",
+                    "description": "Zone om dinsdag te maaien."
                 },
                 "day_2_enabled": {
                     "name": "Woensdag ingeschakeld",
-                    "description": "Of maaien op woensdag moet gebeuren."
+                    "description": "Of er op woensdag gemaaid moet worden."
                 },
                 "day_2_duration": {
                     "name": "Woensdag duur",
@@ -217,12 +217,12 @@
                     "description": "Aantal maaicycli voor woensdag (1-2)."
                 },
                 "day_2_zone": {
-                    "name": "Woensdag zone",
-                    "description": "Zone om op woensdag te maaien."
+                    "name": "Woensdagzone",
+                    "description": "Zone om te maaien op woensdag."
                 },
                 "day_3_enabled": {
                     "name": "Donderdag ingeschakeld",
-                    "description": "Of maaien op donderdag moet gebeuren."
+                    "description": "Of er donderdag gemaaid moet worden."
                 },
                 "day_3_duration": {
                     "name": "Donderdag duur",
@@ -233,12 +233,12 @@
                     "description": "Aantal maaicycli voor donderdag (1-2)."
                 },
                 "day_3_zone": {
-                    "name": "Donderdag zone",
-                    "description": "Zone om op donderdag te maaien."
+                    "name": "Donderdag streek",
+                    "description": "Zone om te maaien op donderdag."
                 },
                 "day_4_enabled": {
                     "name": "Vrijdag ingeschakeld",
-                    "description": "Of maaien op vrijdag moet gebeuren."
+                    "description": "Of er op vrijdag gemaaid moet worden."
                 },
                 "day_4_duration": {
                     "name": "Vrijdag duur",
@@ -250,14 +250,14 @@
                 },
                 "day_4_zone": {
                     "name": "Vrijdag zone",
-                    "description": "Zone om op vrijdag te maaien."
+                    "description": "Zone om te maaien op vrijdag."
                 },
                 "day_5_enabled": {
                     "name": "Zaterdag ingeschakeld",
-                    "description": "Of maaien op zaterdag moet gebeuren."
+                    "description": "Of je nu op zaterdag moet maaien."
                 },
                 "day_5_duration": {
-                    "name": "Zaterdag duur",
+                    "name": "Duur zaterdag",
                     "description": "Maaiduur voor zaterdag in minuten (1-255)."
                 },
                 "day_5_cycles": {
@@ -266,11 +266,11 @@
                 },
                 "day_5_zone": {
                     "name": "Zaterdag zone",
-                    "description": "Zone om op zaterdag te maaien."
+                    "description": "Zone om te maaien op zaterdag."
                 },
                 "day_6_enabled": {
                     "name": "Zondag ingeschakeld",
-                    "description": "Of maaien op zondag moet gebeuren."
+                    "description": "Of je nu op zondag moet maaien."
                 },
                 "day_6_duration": {
                     "name": "Zondag duur",
@@ -282,7 +282,7 @@
                 },
                 "day_6_zone": {
                     "name": "Zondag zone",
-                    "description": "Zone om op zondag te maaien."
+                    "description": "Zone om te maaien op zondag."
                 }
             }
         }

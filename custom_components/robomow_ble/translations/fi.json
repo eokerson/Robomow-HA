@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Valitse Robomow-laite, jonka haluat lisätä, ja anna emolevyn sarjanumero. \n\nSaadaksesi emolevyn sarjanumeron:\n1) Kirjaudu sisään osoitteessa myrobomow.robomow.com.\n2) Avaa selaimesi Kehittäjätyökalut (F12).\n3) Siirry Verkko-välilehteen.\n4) Lataa sivu uudelleen.\n5) Etsi pyyntö, joka päättyy /api/customer/products.\n6) Napsauta pyyntöä ja avaa Vastaus-välilehti.\n7) Etsi JSON-vastauksesta kenttä nimeltä MainboardSerial. Tämä arvo on todellinen emolevyn sarjanumero.",
+                "description": "Valitse Robomow-laite, jonka haluat lisätä, ja anna emolevyn sarjanumero.\n\nSaat emolevyn sarjanumeron seuraavasti:\n1) Kirjaudu sisään osoitteessa myrobomow.robomow.com.\n2) Avaa selaimesi Kehittäjätyökalut (F12).\n3) Siirry Verkko-välilehteen.\n4) Lataa sivu uudelleen.\n5) Etsi pyyntö, joka päättyy /api/customer/products.\n6) Napsauta pyyntöä ja avaa Vastaus-välilehti.\n7) Etsi JSON-vastauksesta kenttä nimeltä MainboardSerial. Tämä arvo on todellinen emolevyn sarjanumero.",
                 "data": {
                     "address": "Osoite",
                     "mainboard_serial": "Emolevyn sarjanumero"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Anna sen Robomow-laitteen emolevyn sarjanumero, jonka haluat lisätä Home Assistantiin.\n\nSaadaksesi emolevyn sarjanumeron:\n1) Kirjaudu sisään osoitteessa myrobomow.robomow.com.\n2) Avaa selaimesi Kehittäjätyökalut (F12).\n3) Siirry Verkko-välilehteen.\n4) Lataa sivu uudelleen.\n5) Etsi pyyntö, joka päättyy /api/customer/products.\n6) Napsauta pyyntöä ja avaa Vastaus-välilehti.\n7) Etsi JSON-vastauksesta kenttä nimeltä MainboardSerial. Tämä arvo on todellinen emolevyn sarjanumero.",
+                "description": "Anna lisättävän Robomow-laitteen emolevyn sarjanumero.\n\nSaat emolevyn sarjanumeron seuraavasti:\n1) Kirjaudu sisään osoitteessa myrobomow.robomow.com.\n2) Avaa selaimesi Kehittäjätyökalut (F12).\n3) Siirry Verkko-välilehteen.\n4) Lataa sivu uudelleen.\n5) Etsi pyyntö, joka päättyy /api/customer/products.\n6) Napsauta pyyntöä ja avaa Vastaus-välilehti.\n7) Etsi JSON-vastauksesta kenttä nimeltä MainboardSerial. Tämä arvo on todellinen emolevyn sarjanumero.",
                 "data": {
                     "mainboard_serial": "Emolevyn sarjanumero"
                 }
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Seuraava lähtö"
             },
-            "previous_departure": {
-                "name": "Edellinen lähtö"
+            "previous_duration": {
+                "name": "Edellinen kesto"
             },
             "expected_duration": {
                 "name": "Odotettu kesto"
@@ -258,7 +258,7 @@
                 },
                 "day_5_duration": {
                     "name": "Lauantain kesto",
-                    "description": "Leikkuuaika lauantaille minuuteissa (1-255)."
+                    "description": "Leikkuuaika lauantaille minuutteina (1-255)."
                 },
                 "day_5_cycles": {
                     "name": "Lauantaisyklit",

@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Next Departure"
             },
-            "previous_departure": {
-                "name": "Previous Departure"
+            "previous_duration": {
+                "name": "Previous Duration"
             },
             "expected_duration": {
                 "name": "Expected Duration"

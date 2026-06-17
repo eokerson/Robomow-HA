@@ -87,7 +87,7 @@
             "next_departure": {
                 "name": "下一班出發"
             },
-            "previous_departure": {
+            "previous_duration": {
                 "name": "先前出發"
             },
             "expected_duration": {

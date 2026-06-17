@@ -2,14 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "Selectați dispozitivul Robomow pe care doriți să-l adăugați și introduceți numărul de serie al plăcii de bază. \n\nPentru a obține numărul de serie al plăcii de bază:\n1) Conectați-vă la myrobomow.robomow.com.\n2) Deschideți Instrumentele pentru dezvoltatori din browser (F12).\n3) Accesați fila Rețea.\n4) Reîncărcați pagina.\n5) Căutați o solicitare care se termină în /api/customer/products.\n6) Faceți clic pe cerere și deschideți fila Răspuns.\n7) În răspunsul JSON, găsiți câmpul numit MainboardSerial. Această valoare este numărul de serie real al plăcii de bază.",
+                "description": "Selectați dispozitivul Robomow pe care doriți să-l adăugați și introduceți numărul de serie al plăcii de bază.\n\nPentru a obține numărul de serie al plăcii de bază:\n1) Conectați-vă la myrobomow.robomow.com.\n2) Deschideți Instrumentele pentru dezvoltatori din browser (F12).\n3) Accesați fila Rețea.\n4) Reîncărcați pagina.\n5) Căutați o solicitare care se termină în /api/customer/products.\n6) Faceți clic pe cerere și deschideți fila Răspuns.\n7) În răspunsul JSON, găsiți câmpul numit MainboardSerial. Această valoare este numărul de serie real al plăcii de bază.",
                 "data": {
                     "address": "Adresa",
                     "mainboard_serial": "Numărul de serie al plăcii de bază"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Introduceți numărul de serie al plăcii de bază pentru dispozitivul Robomow pe care doriți să îl adăugați la Home Assistant.\n\nPentru a obține numărul de serie al plăcii de bază:\n1) Conectați-vă la myrobomow.robomow.com.\n2) Deschideți Instrumentele pentru dezvoltatori din browser (F12).\n3) Accesați fila Rețea.\n4) Reîncărcați pagina.\n5) Căutați o solicitare care se termină în /api/customer/products.\n6) Faceți clic pe cerere și deschideți fila Răspuns.\n7) În răspunsul JSON, găsiți câmpul numit MainboardSerial. Această valoare este numărul de serie real al plăcii de bază.",
+                "description": "Introduceți numărul de serie al plăcii de bază pentru dispozitivul Robomow pe care doriți să îl adăugați.\n\nPentru a obține numărul de serie al plăcii de bază:\n1) Conectați-vă la myrobomow.robomow.com.\n2) Deschideți Instrumentele pentru dezvoltatori din browser (F12).\n3) Accesați fila Rețea.\n4) Reîncărcați pagina.\n5) Căutați o solicitare care se termină în /api/customer/products.\n6) Faceți clic pe cerere și deschideți fila Răspuns.\n7) În răspunsul JSON, găsiți câmpul numit MainboardSerial. Această valoare este numărul de serie real al plăcii de bază.",
                 "data": {
                     "mainboard_serial": "Numărul de serie al plăcii de bază"
                 }
@@ -87,8 +87,8 @@
             "next_departure": {
                 "name": "Următoarea Plecare"
             },
-            "previous_departure": {
-                "name": "Plecarea anterioară"
+            "previous_duration": {
+                "name": "Durata anterioară"
             },
             "expected_duration": {
                 "name": "Durata așteptată"
@@ -198,7 +198,7 @@
                 },
                 "day_1_cycles": {
                     "name": "Cicluri de marți",
-                    "description": "Numărul de cicluri de cosire pentru ziua de marți (1-2)."
+                    "description": "Numărul de cicluri de cosire pentru marți (1-2)."
                 },
                 "day_1_zone": {
                     "name": "Zona de marți",

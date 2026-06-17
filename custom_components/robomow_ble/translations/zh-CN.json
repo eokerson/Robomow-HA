@@ -2,287 +2,287 @@
     "config": {
         "step": {
             "user": {
-                "description": "Select the Robomow device you want to add and enter the mainboard serial number. \n\nTo get the mainboard serial number:\n1) Log in to myrobomow.robomow.com.\n2) Open your browser's Developer Tools (F12).\n3) Go to the Network tab.\n4) Reload the page.\n5) Look for a request ending in /api/customer/products.\n6) Click the request and open the Response tab.\n7) In the JSON response, find the field named MainboardSerial. This value is the actual mainboard serial number.",
+                "description": "选择您要添加的Robomow设备并输入主板序列号。\n\n获取主板序列号：\n1) 登录 myrobomow.robomow.com。\n2) 打开浏览器的开发人员工具 (F12)。\n3) 转到网络选项卡。\n4) 重新加载页面。\n5) 查找以 /api/customer/products 结尾的请求。\n6) 单击请求并打开“响应”选项卡。\n7) 在 JSON 响应中，找到名为 MainboardSerial 的字段。该值是实际的主板序列号。",
                 "data": {
-                    "address": "Address",
-                    "mainboard_serial": "Mainboard serial number"
+                    "address": "地址",
+                    "mainboard_serial": "主板序列号"
                 }
             },
             "bluetooth_confirm": {
-                "description": "Enter the mainboard serial number for the Robomow device you want to add to Home Assistant.\n\nTo get the mainboard serial number:\n1) Log in to myrobomow.robomow.com.\n2) Open your browser's Developer Tools (F12).\n3) Go to the Network tab.\n4) Reload the page.\n5) Look for a request ending in /api/customer/products.\n6) Click the request and open the Response tab.\n7) In the JSON response, find the field named MainboardSerial. This value is the actual mainboard serial number.",
+                "description": "输入要添加的 Roboow 设备的主板序列号。\n\n获取主板序列号：\n1) 登录 myrobomow.robomow.com。\n2) 打开浏览器的开发人员工具 (F12)。\n3) 转到网络选项卡。\n4) 重新加载页面。\n5) 查找以 /api/customer/products 结尾的请求。\n6) 单击请求并打开“响应”选项卡。\n7) 在 JSON 响应中，找到名为 MainboardSerial 的字段。该值是实际的主板序列号。",
                 "data": {
-                    "mainboard_serial": "Mainboard serial number"
+                    "mainboard_serial": "主板序列号"
                 }
             }
         },
         "error": {
-            "no_unique_address": "No unique address provided.",
-            "no_mainboard_serial": "No mainboard serial number provided.",
-            "invalid_mainboard_serial": "The mainboard serial number is invalid. Verify it and try again.",
-            "model_unsupported": "The mower model is not supported.",
-            "device_not_found": "The Robomow device could not be found. Move closer and try again.",
-            "service_not_found": "The required Robomow Bluetooth service was not found on this device.",
-            "characteristics_not_found": "The required Robomow Bluetooth characteristics were not found on this device."
+            "no_unique_address": "未提供唯一地址。",
+            "no_mainboard_serial": "没有提供主板序列号。",
+            "invalid_mainboard_serial": "主板序列号无效。验证并重试。",
+            "model_unsupported": "不支持割草机型号。",
+            "device_not_found": "找不到 Robomow 设备。靠近一点再试一次。",
+            "service_not_found": "在此设备上找不到所需的 Roboow 蓝牙服务。",
+            "characteristics_not_found": "在此设备上找不到所需的 Robomow 蓝牙特性。"
         },
         "abort": {
-            "already_configured": "This entry is already configured.",
-            "no_devices_found": "No Robomow devices found.",
-            "not_supported": "This Bluetooth device is not a supported Robomow mower."
+            "already_configured": "该条目已配置。",
+            "no_devices_found": "未找到 Robomow 设备。",
+            "not_supported": "此蓝牙设备不是受支持的 Roboow 割草机。"
         }
     },
     "exceptions": {
         "cannot_connect": {
-            "message": "Cannot connect to the device"
+            "message": "无法连接到设备"
         },
         "invalid_auth": {
-            "message": "Authentication failed"
+            "message": "认证失败"
         },
         "unsupported_device": {
-            "message": "This device model is not supported"
+            "message": "该设备型号不受支持"
         },
         "no_unique_address": {
-            "message": "No unique address provided."
+            "message": "未提供唯一地址。"
         },
         "no_mainboard_serial": {
-            "message": "No mainboard serial number provided."
+            "message": "没有提供主板序列号。"
         }
     },
     "entity": {
         "binary_sensor": {
             "anti_theft_active": {
-                "name": "Anti-theft active"
+                "name": "防盗主动"
             },
             "mower_home": {
-                "name": "Mower home"
+                "name": "割草机之家"
             },
             "charging_active": {
-                "name": "Charging active"
+                "name": "正在充电"
             },
             "disabling_device_removed": {
-                "name": "Disabling device removed"
+                "name": "禁用设备已删除"
             }
         },
         "sensor": {
             "operating_state": {
-                "name": "Operating State",
+                "name": "运行状态",
                 "state": {
-                    "warming_up": "Warming up",
-                    "mowing": "Mowing",
-                    "edge_mowing": "Edge Mowing",
-                    "returning_home_following_edge": "Following edge home",
-                    "returning_home_warming_up": "Warming up to return home",
-                    "returning_home_searching_edge": "Searching edge",
-                    "going_to_start": "Going to starting point",
-                    "learning_entry_point": "Learning entry point",
-                    "idle": "Idle",
-                    "charging": "Charging",
-                    "automatic": "Automatic",
-                    "remote_control": "Remote control",
-                    "bit": "Bit"
+                    "warming_up": "热身",
+                    "mowing": "割草",
+                    "edge_mowing": "边缘割草",
+                    "returning_home_following_edge": "跟随边回家",
+                    "returning_home_warming_up": "回国热身",
+                    "returning_home_searching_edge": "搜索边缘",
+                    "going_to_start": "前往起点",
+                    "learning_entry_point": "学习切入点",
+                    "idle": "闲置的",
+                    "charging": "收费",
+                    "automatic": "自动的",
+                    "remote_control": "遥控",
+                    "bit": "少量"
                 }
             },
             "status_message": {
-                "name": "Status Message"
+                "name": "状态信息"
             },
             "next_departure": {
-                "name": "Next Departure"
+                "name": "下一班出发"
             },
-            "previous_departure": {
-                "name": "Previous Departure"
+            "previous_duration": {
+                "name": "之前的持续时间"
             },
             "expected_duration": {
-                "name": "Expected Duration"
+                "name": "预计持续时间"
             },
             "no_depart_reason": {
-                "name": "No Departure Reason"
+                "name": "无出发原因"
             }
         },
         "switch": {
             "schedule_enabled": {
-                "name": "Schedule enabled"
+                "name": "已启用计划"
             },
             "anti_theft_enabled": {
-                "name": "Anti-theft enabled"
+                "name": "防盗已启用"
             },
             "child_lock_enabled": {
-                "name": "Child lock enabled"
+                "name": "童锁已启用"
             }
         },
         "number": {
             "starting_point_a": {
-                "name": "Starting point A"
+                "name": "起点A"
             },
             "starting_point_b": {
-                "name": "Starting point B"
+                "name": "起点B"
             }
         },
         "select": {
             "wire_signal_type": {
-                "name": "Wire signal type",
+                "name": "有线信号类型",
                 "state": {
-                    "type_a": "Type A",
-                    "type_b": "Type B",
-                    "type_c": "Type C"
+                    "type_a": "A型",
+                    "type_b": "B型",
+                    "type_c": "C型"
                 }
             }
         },
         "lawn_mower": {
             "mower": {
-                "name": "Mower"
+                "name": "割草机"
             }
         }
     },
     "selector": {
         "zone": {
             "options": {
-                "main": "Main",
-                "starting_point_a": "Starting point A",
-                "starting_point_b": "Starting point B",
-                "sub_1": "Sub zone 1",
-                "sub_2": "Sub zone 2",
-                "sub_3": "Sub zone 3",
-                "sub_4": "Sub zone 4"
+                "main": "主要的",
+                "starting_point_a": "起点A",
+                "starting_point_b": "起点B",
+                "sub_1": "分区1",
+                "sub_2": "分区2",
+                "sub_3": "分区3",
+                "sub_4": "分区4"
             }
         }
     },
     "services": {
         "start_mowing": {
-            "name": "Start mowing",
-            "description": "Start mowing with optional starting zone and duration.",
+            "name": "开始割草",
+            "description": "以可选的起始区域和持续时间开始割草。",
             "fields": {
                 "starting_zone": {
-                    "name": "Starting zone",
-                    "description": "Robomow zone to start mowing from."
+                    "name": "起始区",
+                    "description": "Robomow 开始割草的区域。"
                 },
                 "duration": {
-                    "name": "Duration",
-                    "description": "Mowing duration in minutes (1-255). Default is 30 minutes."
+                    "name": "期间",
+                    "description": "割草持续时间（以分钟为单位）(1-255)。默认值为 30 分钟。"
                 }
             }
         },
         "set_schedule": {
-            "name": "Set schedule",
-            "description": "Set the mower schedule.",
+            "name": "设定时间表",
+            "description": "设置割草机时间表。",
             "fields": {
                 "start_time": {
-                    "name": "Start time",
-                    "description": "Time to start mowing each day."
+                    "name": "开始时间",
+                    "description": "每天开始割草的时间到了。"
                 },
                 "end_time": {
-                    "name": "End time",
-                    "description": "Time to end mowing each day."
+                    "name": "结束时间",
+                    "description": "每天结束割草的时间到了。"
                 },
                 "day_0_enabled": {
-                    "name": "Monday enabled",
-                    "description": "Whether to mow on Monday."
+                    "name": "周一启用",
+                    "description": "周一是否割草。"
                 },
                 "day_0_duration": {
-                    "name": "Monday duration",
-                    "description": "Mowing duration for Monday in minutes (1-255)."
+                    "name": "周一持续时间",
+                    "description": "星期一的割草持续时间以分钟为单位 (1-255)。"
                 },
                 "day_0_cycles": {
-                    "name": "Monday cycles",
-                    "description": "Number of mowing cycles for Monday (1-2)."
+                    "name": "周一周期",
+                    "description": "星期一的割草周期数 (1-2)。"
                 },
                 "day_0_zone": {
-                    "name": "Monday zone",
-                    "description": "Zone to mow on Monday."
+                    "name": "周一区",
+                    "description": "周一割草的区域。"
                 },
                 "day_1_enabled": {
-                    "name": "Tuesday enabled",
-                    "description": "Whether to mow on Tuesday."
+                    "name": "周二启用",
+                    "description": "周二是否割草。"
                 },
                 "day_1_duration": {
-                    "name": "Tuesday duration",
-                    "description": "Mowing duration for Tuesday in minutes (1-255)."
+                    "name": "周二持续时间",
+                    "description": "周二的割草持续时间以分钟为单位 (1-255)。"
                 },
                 "day_1_cycles": {
-                    "name": "Tuesday cycles",
-                    "description": "Number of mowing cycles for Tuesday (1-2)."
+                    "name": "周二周期",
+                    "description": "周二的割草周期数 (1-2)。"
                 },
                 "day_1_zone": {
-                    "name": "Tuesday zone",
-                    "description": "Zone to mow on Tuesday."
+                    "name": "周二区",
+                    "description": "周二割草的区域。"
                 },
                 "day_2_enabled": {
-                    "name": "Wednesday enabled",
-                    "description": "Whether to mow on Wednesday."
+                    "name": "周三启用",
+                    "description": "周三是否割草。"
                 },
                 "day_2_duration": {
-                    "name": "Wednesday duration",
-                    "description": "Mowing duration for Wednesday in minutes (1-255)."
+                    "name": "周三持续时间",
+                    "description": "星期三的割草持续时间以分钟为单位 (1-255)。"
                 },
                 "day_2_cycles": {
-                    "name": "Wednesday cycles",
-                    "description": "Number of mowing cycles for Wednesday (1-2)."
+                    "name": "周三周期",
+                    "description": "周三的割草周期数 (1-2)。"
                 },
                 "day_2_zone": {
-                    "name": "Wednesday zone",
-                    "description": "Zone to mow on Wednesday."
+                    "name": "周三区",
+                    "description": "周三割草的区域。"
                 },
                 "day_3_enabled": {
-                    "name": "Thursday enabled",
-                    "description": "Whether to mow on Thursday."
+                    "name": "周四启用",
+                    "description": "周四是否割草。"
                 },
                 "day_3_duration": {
-                    "name": "Thursday duration",
-                    "description": "Mowing duration for Thursday in minutes (1-255)."
+                    "name": "周四持续时间",
+                    "description": "星期四的割草持续时间以分钟为单位 (1-255)。"
                 },
                 "day_3_cycles": {
-                    "name": "Thursday cycles",
-                    "description": "Number of mowing cycles for Thursday (1-2)."
+                    "name": "周四周期",
+                    "description": "周四的割草周期数 (1-2)。"
                 },
                 "day_3_zone": {
-                    "name": "Thursday zone",
-                    "description": "Zone to mow on Thursday."
+                    "name": "周四区",
+                    "description": "星期四割草的区域。"
                 },
                 "day_4_enabled": {
-                    "name": "Friday enabled",
-                    "description": "Whether to mow on Friday."
+                    "name": "周五启用",
+                    "description": "周五是否割草。"
                 },
                 "day_4_duration": {
-                    "name": "Friday duration",
-                    "description": "Mowing duration for Friday in minutes (1-255)."
+                    "name": "周五持续时间",
+                    "description": "周五的割草持续时间以分钟为单位 (1-255)。"
                 },
                 "day_4_cycles": {
-                    "name": "Friday cycles",
-                    "description": "Number of mowing cycles for Friday (1-2)."
+                    "name": "周五周期",
+                    "description": "周五的割草周期数 (1-2)。"
                 },
                 "day_4_zone": {
-                    "name": "Friday zone",
-                    "description": "Zone to mow on Friday."
+                    "name": "周五区",
+                    "description": "周五割草的区域。"
                 },
                 "day_5_enabled": {
-                    "name": "Saturday enabled",
-                    "description": "Whether to mow on Saturday."
+                    "name": "周六启用",
+                    "description": "周六是否割草。"
                 },
                 "day_5_duration": {
-                    "name": "Saturday duration",
-                    "description": "Mowing duration for Saturday in minutes (1-255)."
+                    "name": "周六持续时间",
+                    "description": "星期六的割草持续时间以分钟为单位 (1-255)。"
                 },
                 "day_5_cycles": {
-                    "name": "Saturday cycles",
-                    "description": "Number of mowing cycles for Saturday (1-2)."
+                    "name": "周六周期",
+                    "description": "星期六的割草周期数 (1-2)。"
                 },
                 "day_5_zone": {
-                    "name": "Saturday zone",
-                    "description": "Zone to mow on Saturday."
+                    "name": "周六区",
+                    "description": "周六割草的区域。"
                 },
                 "day_6_enabled": {
-                    "name": "Sunday enabled",
-                    "description": "Whether to mow on Sunday."
+                    "name": "周日启用",
+                    "description": "周日是否割草。"
                 },
                 "day_6_duration": {
-                    "name": "Sunday duration",
-                    "description": "Mowing duration for Sunday in minutes (1-255)."
+                    "name": "周日持续时间",
+                    "description": "周日割草持续时间以分钟为单位 (1-255)。"
                 },
                 "day_6_cycles": {
-                    "name": "Sunday cycles",
-                    "description": "Number of mowing cycles for Sunday (1-2)."
+                    "name": "周日周期",
+                    "description": "周日割草周期数 (1-2)。"
                 },
                 "day_6_zone": {
-                    "name": "Sunday zone",
-                    "description": "Zone to mow on Sunday."
+                    "name": "周日区",
+                    "description": "周日割草区。"
                 }
             }
         }

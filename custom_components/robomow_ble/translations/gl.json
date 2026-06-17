@@ -87,7 +87,7 @@
             "next_departure": {
                 "name": "Próxima Saída"
             },
-            "previous_departure": {
+            "previous_duration": {
                 "name": "Saída previa"
             },
             "expected_duration": {

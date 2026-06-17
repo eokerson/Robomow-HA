@@ -87,7 +87,7 @@
             "next_departure": {
                 "name": "შემდეგი გამგზავრება"
             },
-            "previous_departure": {
+            "previous_duration": {
                 "name": "წინა გამგზავრება"
             },
             "expected_duration": {
