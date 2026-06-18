@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ## [0.3.0] - 2026-06-18
 
+- Updated to robomow_ble 1.3.0
 - Updated translations
 - Changed next departure sensor from duration (minutes) to timestamp
 - Renamed previous departure sensor to previous duration
