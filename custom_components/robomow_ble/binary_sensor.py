@@ -29,20 +29,6 @@ BINARY_SENSOR_DESCRIPTIONS = (
         entity_registry_visible_default=False,
     ),
     BinarySensorEntityDescription(
-        key=EntityKey.MOWER_HOME,
-        translation_key="mower_home",
-        icon="mdi:home",
-        entity_category=EntityCategory.DIAGNOSTIC,
-        entity_registry_visible_default=False,
-    ),
-    BinarySensorEntityDescription(
-        key=EntityKey.CHARGING_ACTIVE,
-        translation_key="charging_active",
-        icon="mdi:battery-charging",
-        entity_category=EntityCategory.DIAGNOSTIC,
-        entity_registry_visible_default=False,
-    ),
-    BinarySensorEntityDescription(
         key=EntityKey.DISABLING_DEVICE_REMOVED,
         translation_key="disabling_device_removed",
         icon="mdi:power-plug-off",
