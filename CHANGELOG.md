@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-06-22
+
+- Updated to robomow_ble 1.3.1
+- Fixed next_departure in case of wrap-around or invalid values
+- Fixed retry mechanism if connection fails
+
 ## [0.3.0] - 2026-06-18
 
 - Updated to robomow_ble 1.3.0
@@ -28,7 +34,8 @@ All notable changes to this project will be documented in this file.
 - Updated README
 - Updated lint configuration
 
-[Unreleased]: https://github.com/arjanmels/Robomow-HA/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/arjanmels/Robomow-HA/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/arjanmels/Robomow-HA/compare/v0.3.0...v1.0.0
 [0.3.0]: https://github.com/arjanmels/Robomow-HA/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/arjanmels/Robomow-HA/releases/tag/v0.2.0
 [0.1.0]: https://github.com/arjanmels/Robomow-HA/releases/tag/v0.1.0

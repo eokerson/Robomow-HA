@@ -155,13 +155,14 @@ class RobomowCoordinator(PassiveBluetoothProcessorCoordinator[RobomowUpdate]):
 
         try:
             await self._mower.async_connect(device)
-            bluetooth.async_clear_advertisement_history(self.hass, self.address)
         except (BleakError, OSError) as err:
             LOGGER.error(
                 "Error connecting after advertisement for %s: %s",
                 self.address,
                 err,
             )
+
+        bluetooth.async_clear_advertisement_history(self.hass, self.address)
 
     def _update_from_service_info(
         self,
