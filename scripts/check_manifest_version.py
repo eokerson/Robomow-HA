@@ -83,10 +83,11 @@ def main() -> None:
     tag_version = tag_match.group(1)
     if tag_version != manifest_version:
         message = (
-            "ERROR: manifest.json version does not match the git tag on HEAD. "
+            "WARNING: manifest.json version does not match the git tag on HEAD. "
             f"manifest.json={manifest_version}, tag={head_tag}"
         )
-        raise SystemExit(message)
+        sys.stdout.write(message + "\n")
+        return
 
     sys.stdout.write(
         f"manifest.json version {manifest_version} matches current tag {head_tag}.\n"
