@@ -21,6 +21,20 @@ if TYPE_CHECKING:
 
 SERVICE_START_MOWING = "start_mowing"
 SERVICE_SET_SCHEDULE = "set_schedule"
+SERVICE_DRIVE = "drive"
+
+ATTR_DIRECTION = "direction"
+ATTR_SPEED = "speed"
+ATTR_TICKS = "ticks"
+ATTR_BLADES = "blades"
+
+# Steering values used by the stock Robomow remote control.
+DRIVE_DIRECTIONS = {
+    "forward": -80,
+    "backward": 90,
+    "left": -120,
+    "right": 35,
+}
 ATTR_STARTING_ZONE = "starting_zone"
 ATTR_DURATION = "duration"
 
@@ -75,6 +89,26 @@ def async_register_services(hass: HomeAssistant) -> None:
     service.async_register_platform_entity_service(
         hass,
         DOMAIN,
+        SERVICE_DRIVE,
+        entity_domain=LAWN_MOWER_DOMAIN,
+        func=async_handle_drive,
+        schema=cv.make_entity_service_schema(
+            {
+                vol.Required(ATTR_DIRECTION): vol.In(sorted(DRIVE_DIRECTIONS)),
+                vol.Optional(ATTR_TICKS, default=5): vol.All(
+                    vol.Coerce(int), vol.Range(min=1, max=50)
+                ),
+                vol.Optional(ATTR_SPEED, default=100): vol.All(
+                    vol.Coerce(int), vol.Range(min=0, max=100)
+                ),
+                vol.Optional(ATTR_BLADES, default=False): cv.boolean,
+            }
+        ),
+    )
+
+    service.async_register_platform_entity_service(
+        hass,
+        DOMAIN,
         SERVICE_SET_SCHEDULE,
         entity_domain=LAWN_MOWER_DOMAIN,
         func=async_handle_set_schedule,
@@ -99,6 +133,9 @@ def async_unregister_services_if_unused(hass: HomeAssistant) -> None:
     ):
         hass.services.async_remove(DOMAIN, SERVICE_SET_SCHEDULE)
 
+    if not has_loaded_entries and hass.services.has_service(DOMAIN, SERVICE_DRIVE):
+        hass.services.async_remove(DOMAIN, SERVICE_DRIVE)
+
 
 async def async_handle_start_mowing(
     entity: RobomowLawnMowerEntity, call: ServiceCall
@@ -107,6 +144,22 @@ async def async_handle_start_mowing(
     await entity.async_start_mowing(
         duration_minutes=call.data.get(ATTR_DURATION),
         starting_zone=Zone[call.data[ATTR_STARTING_ZONE].upper()],
+    )
+
+
+async def async_handle_drive(
+    entity: RobomowLawnMowerEntity, call: ServiceCall
+) -> None:
+    """Handle drive service calls.
+
+    Movement is bounded: the mower stops on its own once packets stop
+    arriving, so each call moves for ticks * 0.2 seconds and no longer.
+    """
+    await entity.coordinator.mower.async_drive(
+        DRIVE_DIRECTIONS[call.data[ATTR_DIRECTION]],
+        speed=call.data[ATTR_SPEED],
+        ticks=call.data[ATTR_TICKS],
+        blades=call.data[ATTR_BLADES],
     )
 
 
