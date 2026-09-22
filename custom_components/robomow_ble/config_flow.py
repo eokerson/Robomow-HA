@@ -25,6 +25,7 @@ from homeassistant.exceptions import (
     ConfigEntryAuthFailed,
 )
 from robomow_ble_lib import RobomowAuthenticationError, RobomowDevice
+from robomow_ble_lib.const import MowerFamily
 
 from .const import (
     CONF_DEVICE_TYPE,
@@ -38,6 +39,10 @@ from .const import (
 if TYPE_CHECKING:
     from homeassistant.config_entries import ConfigFlowResult
     from homeassistant.core import HomeAssistant
+
+
+# Families the library ships a protocol handler for.
+SUPPORTED_FAMILIES = (MowerFamily.RT, MowerFamily.RS, MowerFamily.RC)
 
 
 class RobomowBLEConfigFlow(ConfigFlow, domain=DOMAIN):
@@ -266,10 +271,17 @@ class RobomowConfigData(BluetoothData):
                 raise ConfigEntryAuthFailed
 
             if mower.model == MowerModel.Unknown:
-                msg = "Mower model is unknown"
-                raise ConditionError(msg)
-
-            self.set_device_type(f"Robomow {mower.model.name}")
+                # RS and RC mowers report a model code the library does not
+                # enumerate, so Unknown is the normal result for them. What
+                # decides whether the integration can drive a mower is the
+                # family, not the model, so reject only when no handler
+                # exists for the family.
+                if mower.family not in SUPPORTED_FAMILIES:
+                    msg = f"No protocol handler for family {mower.family.name}"
+                    raise ConditionError(msg)
+                self.set_device_type(f"Robomow {mower.family.name}")
+            else:
+                self.set_device_type(f"Robomow {mower.model.name}")
             self.set_device_hw_version(f"{mower.mainboard_version}")
             self.set_device_sw_version(
                 f"{mower.software_version} ({mower.software_release})"
