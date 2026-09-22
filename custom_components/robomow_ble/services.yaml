@@ -390,3 +390,47 @@ drive:
       default: false
       selector:
         boolean:
+
+dump_eeprom:
+  name: Dump EEPROM
+  description: >-
+    Read every EEPROM parameter in a range and write a JSON snapshot to the
+    config directory. Read-only; nothing is written to the mower. Take one
+    snapshot, change a setting in the Robomow app, take a second, then compare
+    them to find which parameters that setting moved.
+  target:
+    entity:
+      domain: lawn_mower
+      integration: robomow_ble
+  fields:
+    label:
+      name: Label
+      description: >-
+        Name for this snapshot. Becomes the filename, as
+        robomow_eeprom_<label>.json in the config directory.
+      required: true
+      example: before
+      selector:
+        text:
+    first_id:
+      name: First parameter ID
+      description: Lowest EEPROM parameter ID to read.
+      required: false
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 65535
+          step: 1
+          mode: box
+    last_id:
+      name: Last parameter ID
+      description: Highest EEPROM parameter ID to read.
+      required: false
+      default: 511
+      selector:
+        number:
+          min: 0
+          max: 65535
+          step: 1
+          mode: box
