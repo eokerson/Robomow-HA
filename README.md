@@ -8,7 +8,19 @@ Home Assistant integration for Robomow lawnmowers using Bluetooth Low Energy (BL
 It uses BLE proxies to connect to your Robomow device and provides
 real-time status updates.
 
-Currently only supports Robomow RT models.
+## Supported models
+
+- **RT** — full support.
+- **RS / RC** — status, fault and stop reasons, schedule reading, start, edge
+  mow, stop, return to dock, and bounded manual drive.
+
+On RS mowers the `set_schedule` service and the schedule switch have no known
+encoding. They log a warning and change nothing, so the mowing schedule must be
+set on the mower's own keypad or in the Robomow app. Use a Home Assistant
+automation calling `start_mowing` if you want scheduling from HA instead.
+
+RS support was reverse-engineered against a single Robomow 612p (software 25,
+release 302, mainboard 6). It has not been tested on any other RS model.
 
 ## Features
 
@@ -18,12 +30,17 @@ Currently only supports Robomow RT models.
 - Real-time status sensors for battery, charging, mowing, docked state, and
   errors
 - Services to start/stop mowing, return to dock, and set the mowing schedule
+- `robomow_ble.drive` service for bounded manual driving (RS only) — each
+  call moves for a fixed number of 0.2&nbsp;s ticks and the mower stops by
+  itself when packets stop arriving
+- `robomow_ble.dump_eeprom` diagnostic service that writes a read-only
+  snapshot of the mower's EEPROM parameters to the config directory
 - Configuration via UI with device discovery and mainboard serial number input
 
 ## Requirements
 
 - Home Assistant `2026.5.0` or newer
-- A Robomow lawn mower with Bluetooth support (currently RT models)
+- A Robomow lawn mower with Bluetooth support (RT, RS or RC family)
 - Bluetooth connectivity (direct or via BLE proxy)
 - HACS (recommended) or manual installation
 
